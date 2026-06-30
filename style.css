@@ -1,0 +1,966 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0d1117;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   VARIABLES
+=========================== */
+
+:root{
+
+    --primary:#00d4ff;
+    --secondary:#7b2ff7;
+
+    --dark:#0d1117;
+
+    --card:#161b22;
+
+    --text:#ffffff;
+
+    --light:#c9d1d9;
+
+    --transition:.4s ease;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--primary),var(--secondary));
+    border-radius:20px;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(0,0,0,.5);
+
+}
+
+.navbar{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 0;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+    font-weight:500;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-text{
+
+    max-width:850px;
+
+}
+
+.hero-text p{
+
+    color:#c9d1d9;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-text h1{
+
+    font-size:82px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.hero-text h2{
+
+    font-size:42px;
+
+    color:#00d4ff;
+
+    margin-bottom:30px;
+
+}
+
+.hero-desc{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#c9d1d9;
+
+    margin-bottom:45px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+.btn{
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    color:white;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    transition:.4s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(0,212,255,.4);
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#000;
+
+}
+
+/* ===========================
+   HERO IMAGE
+=========================== */
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+/* ===========================
+   FLOAT EFFECT
+=========================== */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:70px;
+
+    position:relative;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    width:90px;
+
+    height:4px;
+
+    background:var(--primary);
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-15px;
+
+    transform:translateX(-50%);
+
+}
+
+/* ===========================
+   SECTION SPACING
+=========================== */
+
+section{
+
+    padding:120px 10%;
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+
+    background:#111827;
+
+}
+
+.about-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.about-container p{
+
+    color:#d1d5db;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+/*=========================
+      SKILLS SECTION
+==========================*/
+
+.skills{
+
+    background:#0d1117;
+
+}
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.skill-card{
+
+    background:#161b22;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 15px 40px rgba(0,212,255,.25);
+
+    border-color:#00d4ff;
+
+}
+
+.skill-card i{
+
+    font-size:55px;
+
+    color:#00d4ff;
+
+    margin-bottom:20px;
+
+}
+
+.skill-card h3{
+
+    font-size:22px;
+
+}
+
+/*=========================
+      PROJECTS
+==========================*/
+
+.projects{
+
+    background:#111827;
+
+}
+
+.project-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+.project-card{
+
+    background:#161b22;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 15px 45px rgba(0,212,255,.25);
+
+}
+
+.project-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.project-card h3{
+
+    margin:20px;
+
+    color:#00d4ff;
+
+}
+
+.project-card p{
+
+    margin:0 20px 25px;
+
+    color:#c9d1d9;
+
+    line-height:1.8;
+
+}
+
+/*=========================
+     CONTACT
+==========================*/
+
+.contact{
+
+    background:#0d1117;
+
+}
+
+.contact-container{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.contact-container p{
+
+    background:#161b22;
+
+    padding:22px;
+
+    border-radius:15px;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+.contact-container p:hover{
+
+    transform:translateX(10px);
+
+    border-left:5px solid #00d4ff;
+
+}
+
+.contact-container i{
+
+    color:#00d4ff;
+
+    margin-right:15px;
+
+}
+
+/*=========================
+      FOOTER
+==========================*/
+
+footer{
+
+    padding:30px;
+
+    text-align:center;
+
+    background:#111827;
+
+    color:#c9d1d9;
+
+}
+
+/*=========================
+      FADE ANIMATION
+==========================*/
+
+.hero,
+.about,
+.skills,
+.projects,
+.contact{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*======================================
+        RESPONSIVE DESIGN
+=======================================*/
+
+@media(max-width:1024px){
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding-top:120px;
+
+    }
+
+    .hero-desc{
+
+        margin:auto;
+
+        margin-bottom:35px;
+
+    }
+
+    .buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-image img{
+
+        width:320px;
+
+        height:320px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        position:relative;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+        color:white;
+
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:100%;
+
+        right:0;
+
+        width:100%;
+
+        background:#111827;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+        padding:30px 0;
+
+        display:none;
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+    .hero-text h1{
+
+        font-size:48px;
+
+    }
+
+    .hero-text h2{
+
+        font-size:28px;
+
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero-image img{
+
+        width:250px;
+
+        height:250px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn{
+
+        width:220px;
+
+        text-align:center;
+
+    }
+
+    .project-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*======================================
+        HOVER EFFECTS
+=======================================*/
+
+.logo{
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.logo:hover{
+
+    color:#00d4ff;
+
+}
+
+.project-card img{
+
+    transition:.5s;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.project-card{
+
+    position:relative;
+
+}
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,0),
+        rgba(0,0,0,.45)
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.project-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*======================================
+        GLOW EFFECT
+=======================================*/
+
+.skill-card,
+.project-card,
+.contact-container p{
+
+    backdrop-filter:blur(10px);
+
+}
+
+.hero-image img:hover{
+
+    box-shadow:
+
+    0 0 35px #00d4ff,
+
+    0 0 70px #7b2ff7,
+
+    0 0 120px #00d4ff;
+
+}
+
+/*======================================
+        SMOOTH TRANSITIONS
+=======================================*/
+
+a,
+button,
+img,
+.skill-card,
+.project-card,
+.contact-container p{
+
+    transition:.4s ease;
+
+}
+
+/*======================================
+        SELECTION COLOR
+=======================================*/
+
+::selection{
+
+    background:#00d4ff;
+
+    color:black;
+
+}
+
+/*======================================
+        ANIMATED GRADIENT BACKGROUND
+=======================================*/
+
+body{
+
+    background:linear-gradient(
+        -45deg,
+        #0d1117,
+        #111827,
+        #0d1117,
+        #161b22
+    );
+
+    background-size:400% 400%;
+
+    animation:gradientBG 15s ease infinite;
+
+}
+
+@keyframes gradientBG{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/*======================================
+        SCROLL TO TOP BUTTON
+=======================================*/
+
+#topBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#00d4ff;
+
+    color:black;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:1000;
+
+}
+
+#topBtn:hover{
+
+    transform:scale(1.1);
+
+}
+
+/*======================================
+        END
+=======================================*/
